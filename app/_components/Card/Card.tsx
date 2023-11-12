@@ -2,16 +2,12 @@ import { FC } from 'react';
 import styles from './Card.module.scss';
 import {Button} from "@/app/_components/Button";
 import {ThemeTypes} from "@/types/theme";
+import {CardProps} from "@/app/_components/Card/Card.types";
 
-interface Props {
-  className?: string;
-  theme?: ThemeTypes;
-}
-
-export const Card: FC<Props> = ({ className, theme = ThemeTypes.DEFAULT }) => {
+export const Card: FC<CardProps> = ({ className, theme = ThemeTypes.DEFAULT, title, subtitle, buttonText }) => {
   return <div className={styles.card}>
-    <h2>Card title</h2>
-    <p>Card subtitle</p>
-    <Button theme={theme}>Hello</Button>
+    <h2>{title}</h2>
+    <p>{subtitle}</p>
+    <Button theme={theme}>{buttonText}</Button>
   </div>;
 };

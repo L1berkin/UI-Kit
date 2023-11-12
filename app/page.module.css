@@ -3,15 +3,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-  width: 100%;
-  max-width: 600px;
-  padding: 30px;
-  border: 2px solid #000;
-  border-radius: 14px;
-}
